@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pierre Glardon - Portfolio</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <ul id="scene" class="scene">
+                <li class="layer" data-depth="0.15">
+                    <div class="background"></div>
+                </li>
+                <li class="layer" data-depth="0.30">
+                    <div class="noise"></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- JS -->
+        <script src="js/parallax.js"></script>
+        <script>
+            var scene = document.getElementById('scene');
+            var parallax = new Parallax(scene);
+        </script>
+
+    </body>
+</html>

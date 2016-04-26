@@ -1,0 +1,48 @@
+@import "reset.css";
+
+body {
+    background:#212121;
+    .wrapper {
+        text-align: center;
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        .scene {
+            position:relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            .layer {
+                display: block;
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                .background {
+                    background: url(../img/background.jpg) no-repeat 50% 100%;
+                    background-size: cover;
+                    position: absolute;
+                    width: 110%;
+                    left: -5%;
+                    top: -5%;
+                    bottom: -20px;
+                }
+                .noise {
+                    background: url(../img/noise.png) repeat 50% 100%;
+                    position: absolute;
+                    width: 110%;
+                    left: -5%;
+                    top: -5%;
+                    bottom: -20px;
+                    opacity: 0.75;
+                }
+            }
+        }
+
+    }
+}

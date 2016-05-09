@@ -7,12 +7,12 @@ $( document ).ready(function() {
     // build tween
     var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
     // init controller
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0.5", duration: "200%"}});
+    var controllerDiv = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0.5", duration: "150%"}});
 
     // build scenes
     new ScrollMagic.Scene({triggerElement: "#portrait"})
-    .setTween("#portrait > img", {y: "-100%", ease: Linear.easeNone})
-    .addTo(controller);
+    .setTween("#portrait > div", {y: "80%", ease: Linear.easeNone})
+    .addTo(controllerDiv);
 
     // change behaviour of controller to animate scroll instead of jump
     controller.scrollTo(function (newpos) {
@@ -32,7 +32,7 @@ $( document ).ready(function() {
             }
         }
     });
-     var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0.5", duration: "100%"}});
+     var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0.2", duration: "100%"}});
     new ScrollMagic.Scene({triggerElement: "#home"})
                     .setClassToggle(".navlink.l1", "active")
                     .addTo(controller2);

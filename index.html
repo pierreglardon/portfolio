@@ -4,21 +4,56 @@
         <meta charset="UTF-8">
         <title>Pierre Glardon - Portfolio</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="js/pierreglardon.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-
-        <div class="wrapper">
-            <ul id="scene" class="scene">
-                <li class="layer" data-depth="0.10">
-                    <div class="background"></div>
-                </li>
-                <li class="layer" data-depth="0.30">
-                    <div class="noise"></div>
-                </li>
-            </ul>
-        </div>
-
+        <header>
+            <section>
+                <a href="">Pierre Glardon</a>
+            </section>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#aboutme">À propos de moi</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="home">
+            <div class="wrapper">
+                <ul id="scene" class="scene">
+                    <li class="layer" data-depth="0.10">
+                        <div class="background"></div>
+                    </li>
+                    <li class="layer" data-depth="0.25">
+                        <div class="noise"></div>
+                    </li>
+                    <li class="layer content" data-depth="0.40">
+                        <section>
+                            <h1>Pierre Glardon</h1>
+                            <h2>Webdesigner</h2>
+                            <div>
+                                <a href="http://twitter.com/pierre_glardon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="aboutme">
+            test
+        </section>
+        <section id="portfolio">
+            test
+        </section>
+        <section id="contact">
+            test
+        </section>
         <!-- JS -->
         <script src="js/parallax.js"></script>
         <script>

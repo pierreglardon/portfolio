@@ -5,13 +5,6 @@ body {
     background:#212121;
     font-family:"Open sans", sans-serif;
     font-size:14px;
-    a {
-        opacity: 1;
-        transition:opacity ease 0.2s;
-        &:hover {
-            opacity:0.7;
-        }
-    }
     header {
         position:fixed;
         z-index: 100;
@@ -31,6 +24,11 @@ body {
                 color:#fff;
                 letter-spacing: 1px;
                 font-weight:bold;
+                opacity: 1;
+                transition:opacity ease 0.2s;
+                &:hover {
+                    opacity:0.7;
+                }
             }
         }
         nav.navigation {
@@ -49,6 +47,40 @@ body {
                         text-transform: uppercase;
                         font-size:0.9rem;
                         letter-spacing: 0.4px;
+                        opacity: 1;
+                        transition:opacity ease 0.2s;
+                        display:block;
+                        position:relative;
+                        &::after {
+                            position:absolute;
+                            width:0;
+                            background:#fff;
+                            width:0px;
+                            height:3px;
+                            transition:width ease 0.2s;
+                            content:"";
+                            display:block;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            opacity:0.7;
+                            &::after {
+                                width:100%;
+                            }
+                        }
+                        &.active {
+                            &::after {
+                                position:absolute;
+                                width:0;
+                                background:#fff;
+                                width:100%;
+                                height:3px;
+                                transition:width ease 0.2s;
+                                content:"";
+                                display:block;
+                                z-index: -1;
+                            }
+                        }
                     }
                 }
             }
@@ -124,7 +156,76 @@ body {
                                 a {
                                     color:#fff;
                                     font-size:1.2rem;
+                                    opacity: 1;
+                                    transition:opacity ease 0.2s;
+                                    &:hover {
+                                        opacity:0.7;
+                                    }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #aboutme {
+        background:#212121;
+        &:after {
+            clear:both;
+            content:"";
+            display:block;
+        }
+        aside {
+            height:100vh;
+            position:relative;
+            box-sizing: border-box;
+            float:left;
+            width:60%;
+            &.portrait {
+                width:40%;
+                overflow:hidden;
+                height:100vh;
+                img {
+                    height:200%;
+                    margin-left: -50%;
+                }
+            }
+            section {
+                color:#fff;
+                position:relative;
+                top:50%;
+                transform: translateY(-50%);
+                padding:50px;
+                line-height:2;
+                h3 {
+                    font-size:3rem;
+                    font-family:serif;
+                    line-height: 1.2;
+                }
+                p {
+                    font-size:1.4rem;
+                    a {
+                        color:#fff;
+                        display:inline-block;;
+                        position:relative;
+                        transition:color ease 0.3s, padding ease 0.3s;
+                        padding:0px 0px;
+                        &::after {
+                            position:absolute;
+                            content:"";
+                            left:0;
+                            width:0px;
+                            background:#fff;
+                            height:100%;
+                            transition:width ease 0.3s;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            color:#3C3C3C;
+                            padding:0px 10px;
+                            &::after {
+                                width:100%;
                             }
                         }
                     }

@@ -1,9 +1,45 @@
-
 $( document ).ready(function() {
-    $("nav.navigation a").click(function(e){
-        event.preventDefault();
-        $("html, body").animate({
-            scrollTop:$($.attr(this,"href")).offset().top
-        },600);
+    // Parallax Home
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+
+    // Parallax portrait & scrolling
+    // build tween
+    var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
+    // init controller
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0.5", duration: "200%"}});
+
+    // build scenes
+    new ScrollMagic.Scene({triggerElement: "#portrait"})
+    .setTween("#portrait > img", {y: "-100%", ease: Linear.easeNone})
+    .addTo(controller);
+
+    // change behaviour of controller to animate scroll instead of jump
+    controller.scrollTo(function (newpos) {
+        TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
     });
-})
+
+    //  bind scroll to anchor links
+    $(document).on("click", "a[href^='#']", function (e) {
+        var id = $(this).attr("href");
+        if ($(id).length > 0) {
+            e.preventDefault();
+            // trigger scroll
+            controller.scrollTo(id);
+            // if supported by the browser we can even update the URL.
+            if (window.history && window.history.pushState) {
+                history.pushState("", document.title, id);
+            }
+        }
+    });
+     var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "0.5", duration: "100%"}});
+    new ScrollMagic.Scene({triggerElement: "#home"})
+                    .setClassToggle(".navlink.l1", "active")
+                    .addTo(controller2);
+    new ScrollMagic.Scene({triggerElement: "#aboutme"})
+                    .setClassToggle(".navlink.l2", "active")
+                    .addTo(controller2);
+    new ScrollMagic.Scene({triggerElement: "#portfolio"})
+                    .setClassToggle(".navlink.l3", "active")
+                    .addTo(controller2);
+});

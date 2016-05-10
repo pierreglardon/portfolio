@@ -38,4 +38,6 @@ $( document ).ready(function() {
     new ScrollMagic.Scene({triggerElement: "#portfolio"})
                     .setClassToggle(".navlink.l3", "active")
                     .addTo(controller2);
+
+
 });

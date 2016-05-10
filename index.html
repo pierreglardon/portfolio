@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Pierre Glardon - Portfolio</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="js/pierreglardon.js"></script>
+        <script src="js/pierreglardon-nav.js"></script>
         <!-- scroll magic -->
         <script type="text/javascript" src="js/scrollmagic/TweenMax.min.js"></script>
     	<script type="text/javascript" src="js/scrollmagic/ScrollMagic.min.js"></script>
@@ -21,6 +23,15 @@
                 <a href="#home">Pierre Glardon</a>
             </section>
             <nav class="navigation">
+                <ul>
+                    <li><a href="#home" class="navlink l1">Accueil</a></li>
+                    <li><a href="#aboutme" class="navlink l2">À propos de moi</a></li>
+                    <li><a href="#portfolio" class="navlink l3">Portfolio</a></li>
+                    <!-- <li><a href="#contact">Contact</a></li> -->
+                </ul>
+            </nav>
+            <nav class="navigationMobile">
+                <i class="fa fa-bars openMenu" aria-hidden="true"></i>
                 <ul>
                     <li><a href="#home" class="navlink l1">Accueil</a></li>
                     <li><a href="#aboutme" class="navlink l2">À propos de moi</a></li>
@@ -71,7 +82,6 @@
         <section id="portfolio">
             <h3>Portfolio</h3>
             <div class="listing">
-                <i class="fa fa-times close-project" aria-hidden="true"></i>
                 <article>
                     <img src="http://jkeyshare.com/wp-content/uploads/2016/02/Salient-Responsive-Multi-Purpose-Theme.jpg" />
                     <h4>Titre du projet</h4>

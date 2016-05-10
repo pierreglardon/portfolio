@@ -2,7 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Pierre Glardon - Portfolio</title>
+        <title>Pierre Glardon - Travaux</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
         <link rel="stylesheet" href="../css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -13,14 +14,22 @@
         <script type="text/javascript" src="../js/scrollmagic/animation.gsap.min.js"></script>
     	<script type="text/javascript" src="../js/scrollmagic/debug.addIndicators.min.js"></script>
 
-
     </head>
-    <body>
+    <body class="project">
         <header>
             <section>
-                <a href="#home">Pierre Glardon</a>
+                <a href="../index.html#home">Pierre Glardon</a>
             </section>
             <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html#home" class="navlink l1">Accueil</a></li>
+                    <li><a href="../index.html#aboutme" class="navlink l2">À propos de moi</a></li>
+                    <li><a href="../index.html#portfolio" class="navlink l3">Portfolio</a></li>
+                    <!-- <li><a href="#contact">Contact</a></li> -->
+                </ul>
+            </nav>
+            <nav class="navigationMobile">
+                <i class="fa fa-bars openMenu" aria-hidden="true"></i>
                 <ul>
                     <li><a href="../index.html#home" class="navlink l1">Accueil</a></li>
                     <li><a href="../index.html#aboutme" class="navlink l2">À propos de moi</a></li>
@@ -40,83 +49,16 @@
                     </li>
                     <li class="layer content" data-depth="0.40">
                         <section>
-                            <h1>Pierre Glardon</h1>
-                            <h2>Webdesigner</h2>
-                            <div>
-                                <a href="http://twitter.com/pierre_glardon">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                            </div>
+                            <h1>Nom du project</h1>
                         </section>
                     </li>
                 </ul>
             </div>
         </section>
-        <section id="aboutme">
-            <aside id="portrait" class="portrait">
-                <div>
-                    <img src="img/test-portrait.jpg" alt="" />
-                </div>
-            </aside>
-            <aside>
-                <section>
-                    <h3>Bonjour,</h3>
-                    <p>Je suis Pierre, j'ai 22 ans et suis webdesigner.</p>
-                    <p>Passionné par le web depuis mon enfance, c'est très logiquement que je me suis orienté vers le webdesign.</p>
-                    <p>J'ai étudié à l'école d'art MJM Strasbourg.</p>
-                    <p> Un projet ? Contactez-moi : <a href="mailto:hello@pierreglardon.fr">hello@pierreglardon.fr</a></p>
-                </section>
-            </aside>
-        </section>
-        <section id="portfolio">
-            <h3>Portfolio</h3>
-            <div class="listing">
-                <i class="fa fa-times close-project" aria-hidden="true"></i>
-                <article>
-                    <img src="http://jkeyshare.com/wp-content/uploads/2016/02/Salient-Responsive-Multi-Purpose-Theme.jpg" />
-                    <h4>Titre du projet</h4>
-                    <a href="works/project.html">&nbsp;</a>
-                </article>
-
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
+        <section id="project">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, molestiae. Soluta placeat laborum praesentium? Fugiat inventore asperiores vitae, optio vel dolorum veniam mollitia magnam velit in quos commodi repellendus a.</p>
+            <img src="http://jkeyshare.com/wp-content/uploads/2016/02/Salient-Responsive-Multi-Purpose-Theme.jpg" class="img-project" />
+            <img src="http://jkeyshare.com/wp-content/uploads/2016/02/Salient-Responsive-Multi-Purpose-Theme.jpg" class="img-project" />
         </section>
 
         <!-- JS -->

@@ -14,6 +14,9 @@ body {
         padding:30px 50px 0;
         box-sizing: border-box;
         line-height:30px;
+        @media only screen and (max-width: 768px) {
+        padding:30px 30px 0;
+        }
         section {
             float:left;
             text-transform: uppercase;
@@ -35,6 +38,9 @@ body {
             float:right;
             display:inline-block;
             transition:margin-top ease 0.5s;
+            @media only screen and (max-width: 768px) {
+                display:none;
+            }
             ul {
                 li {
                     display:inline-block;
@@ -54,7 +60,6 @@ body {
                         position:relative;
                         &::after {
                             position:absolute;
-                            width:0;
                             background:#fff;
                             width:0px;
                             height:3px;
@@ -62,6 +67,72 @@ body {
                             content:"";
                             display:block;
                             z-index: -1;
+                        }
+                        &:hover {
+                            opacity:0.7;
+                            &::after {
+                                width:100%;
+                            }
+                        }
+                        &.active {
+                            &::after {
+                                position:absolute;
+                                width:0;
+                                background:#fff;
+                                width:100%;
+                                height:3px;
+                                transition:width ease 0.2s;
+                                content:"";
+                                display:block;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        nav.navigationMobile {
+            float:right;
+            display:none;
+            transition:margin-top ease 0.5s;
+            position:relative;
+            @media only screen and (max-width: 768px) {
+                display:block;
+            }
+            .openMenu {
+                font-size:26px;
+                color:#fff;
+                vertical-align: sub;
+                cursor: pointer;
+            }
+            ul {
+                display:none;
+                position: absolute;
+                text-align: right;
+                right:0;
+                width:200px;
+                li {
+                    display:block;
+                    a {
+                        text-decoration: none;
+                        color:#fff;
+                        text-transform: uppercase;
+                        font-size:0.9rem;
+                        letter-spacing: 0.4px;
+                        opacity: 1;
+                        transition:opacity ease 0.2s;
+                        display:block;
+                        position:relative;
+                        &::after {
+                            position:absolute;
+                            background:#fff;
+                            width:0px;
+                            height:3px;
+                            transition:width ease 0.2s;
+                            content:"";
+                            display:block;
+                            z-index: -1;
+                            right:0;
                         }
                         &:hover {
                             opacity:0.7;
@@ -105,6 +176,12 @@ body {
             width: 100%;
             left: 0;
             top: 0;
+            @media only screen and (max-width: 768px) {
+                height:640px;
+            }
+            @media only screen and (max-width: 480px) {
+                height:440px;
+            }
             .scene {
                 position:relative;
                 display: block;
@@ -149,6 +226,10 @@ body {
                             margin:auto;
                             color:#fff;
                             box-sizing: border-box;
+                            @media only screen and (max-width: 768px) {
+                                left:30px;
+                                right:30px;
+                            }
                             h1 {
                                 font-size:1.5rem;
                                 font-weight:bold;
@@ -179,6 +260,7 @@ body {
         }
     }
     #aboutme {
+        margin-top:50px;
         &:after {
             clear:both;
             content:"";
@@ -190,10 +272,17 @@ body {
             box-sizing: border-box;
             float:left;
             width:60%;
+            @media only screen and (max-width: 768px) {
+                height:inherit;
+                width:100%;
+            }
             &.portrait {
                 width:40%;
                 overflow:hidden;
-                height:100vh;
+                @media only screen and (max-width: 768px) {
+                    width:100%;
+                    height:300px
+                }
                 div {
                     height: 550px;
                     width: 300px;
@@ -201,6 +290,9 @@ body {
                     position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
+                    @media only screen and (max-width: 768px) {
+                        margin-top:-40%;
+                    }
                     img {
                         height:100%;
                     }
@@ -213,19 +305,32 @@ body {
                 transform: translateY(-50%);
                 padding:50px;
                 line-height:2;
+                @media only screen and (max-width: 768px) {
+                transform: translateY(0%);
+                }
                 h3 {
                     font-size:3rem;
                     font-family:serif;
                     line-height: 1.2;
+                    @media only screen and (max-width: 768px) {
+                        font-size:2rem;
+                    }
                 }
                 p {
                     font-size:1.4rem;
+                    @media only screen and (max-width: 768px) {
+                        font-size:1rem;
+                    }
                     a {
                         color:#fff;
                         display:inline-block;;
                         position:relative;
                         transition:color ease 0.3s, padding ease 0.3s;
                         padding:0px 0px;
+                        @media only screen and (max-width: 768px) {
+                            color:#3C3C3C;
+                            padding:0px 10px;
+                        }
                         &::after {
                             position:absolute;
                             content:"";
@@ -235,6 +340,9 @@ body {
                             height:100%;
                             transition:width ease 0.3s;
                             z-index: -1;
+                            @media only screen and (max-width: 768px) {
+                                width:100%;
+                            }
                         }
                         &:hover {
                             color:#3C3C3C;
@@ -257,30 +365,13 @@ body {
             font-weight:bold;
             text-transform: uppercase;
             padding:150px 0;
+            @media only screen and (max-width: 768px) {
+                padding:70px 0;
+            }
         }
         .listing {
             overflow-x: hidden;
             overflow-y: auto;
-            .close-project {
-                margin-top:-200px;
-                transition: margin-top ease 0.5s;
-            }
-            &.project-active {
-                .close-project {
-                    display:block;
-                    position: fixed;
-                    top: 0;
-                    z-index: 120;
-                    right: 0;
-                    color: #fff;
-                    font-size: 30px;
-                    margin-top: 10px;
-                    margin-right: 10px;
-                    padding:20px;
-                    cursor:pointer;
-                    transition: margin-top ease 0.5s;
-                }
-            }
             article {
                 max-height:250px;
                 overflow: hidden;
@@ -338,6 +429,35 @@ body {
                         opacity: 1;
                     }
                 }
+            }
+        }
+    }
+    &.project {
+        #home {
+            .wrapper {
+                .scene {
+                    .layer.content {
+                        section {
+                            h1 {
+                                margin-bottom:0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #project {
+            p {
+                color:#ffffff;
+                font-size:1rem;
+                margin:8% auto;
+                line-height: 1.5;
+                max-width:70%;
+            }
+            .img-project {
+                max-width:70%;
+                display:block;
+                margin:5% auto;
             }
         }
     }
